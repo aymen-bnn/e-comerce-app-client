@@ -1,0 +1,6 @@
+export {default as TopNavBar} from "./TopNavBar"
+export {default as NavBar} from "./NavBar"
+export {default as Landing} from "./Landing"
+export {default as ShopNewArrivals} from "./ShopNewArrivals"
+export {default as TrashTalk} from "./TrashTalk"
+export {default as BestSellingBags} from "./BestSellingBags"
