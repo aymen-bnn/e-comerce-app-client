@@ -2,6 +2,7 @@ import React from 'react'
 import {MagnifyingGlassIcon} from '@heroicons/react/24/outline'
 import {UserIcon} from '@heroicons/react/24/outline'
 import {BuildingStorefrontIcon} from '@heroicons/react/24/outline'
+import Link from 'next/link'
 function NavBar() {
   return (
     <div className='w-full h-20 flex items-center bg-white relative'>
@@ -44,9 +45,11 @@ function NavBar() {
         </div>
         {/* icons */}
         <div className='h-full w-1/3 flex items-center justify-end'>
+            <Link href="/login">
             <div className='w-16 h-full flex justify-center items-center'>
                 <UserIcon className='h-7 w-7 cursor-pointer duration-300 hover:scale-125'/>
             </div>
+            </Link>
             <div className='w-16 flex h-full items-center justify-center'>
                 <MagnifyingGlassIcon className='h-7 w-7 cursor-pointer duration-300 hover:scale-125'/>
             </div>

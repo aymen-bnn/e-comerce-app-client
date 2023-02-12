@@ -15,10 +15,6 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        {/* //topnav bar */}
-        <TopNavBar/>
-        {/* //navbar */}
-        <NavBar/>
         {/* LandingPage */}
         <Landing/>
         {/* Shop New Arrivals */}
