@@ -2,13 +2,15 @@ import React, { useState } from 'react'
 import Link from 'next/link'
 import { useSignup } from '../hooks/useSignup'
 import { useLogin } from '../hooks/useLogin'
+import { useAuthContext } from '../hooks/useAuthContext'
+
 function login() {
 
   const [email , setEmail] = useState("")
   const [password , setPassword] = useState("")
-
+  const { user } = useAuthContext()
   const {login , error , isLoading} = useLogin()
-
+  
   const handleSubmit = async (e) => {
     e.preventDefault()
 

@@ -1,14 +1,26 @@
 
 import { useRouter } from "next/router";
 import { StarIcon } from "@heroicons/react/24/outline";
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Image from 'next/image'
+import { useGetProduct } from "../../hooks/useGetProduct";
 
 function ProductDetails() {
-
     const router = new useRouter();
-    const { productId } = router.query;
+    const { id } = router.query;
     
+    useEffect(() => {
+        //try to fetch ddata 
+        //get the response
+        fetch(`http://localhost:4000/api/product/63e6573fb295669670dcf3b1`)
+        .then((res) => res.json())
+        .then((data) => console.log(data))
+        .catch((err) => {
+            console.log(err.message)
+        })
+        //return it
+    }, [id])
+
     const [radioColor , setRadioColor] = useState("");
     const [radioSize , setRadioSize] = useState("S");
 
