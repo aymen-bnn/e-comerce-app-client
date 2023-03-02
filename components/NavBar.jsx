@@ -2,16 +2,21 @@ import React from 'react'
 import {MagnifyingGlassIcon} from '@heroicons/react/24/outline'
 import {UserIcon} from '@heroicons/react/24/outline'
 import {BuildingStorefrontIcon} from '@heroicons/react/24/outline'
+import {Bars4Icon} from '@heroicons/react/24/outline'
 import Link from 'next/link'
 function NavBar() {
   return (
     <div className='w-full h-20 flex items-center bg-white relative'>
+        {/* button */}
+        <div className='w-1/3 flex justify-start md:hidden'>
+            <Bars4Icon className='w-6' />
+        </div>
         {/* logo */}
         <div className='w-1/3 h-full flex items-center'>
-            <p className='text-2xl font-bold px-4'>united by blue</p>
+            <p className='text-2xl text-center font-bold px-4'>united by blue</p>
         </div>
         {/* navs */}
-        <div className='w-1/3 h-full  flex items-center justify-center'>
+        <div className='w-1/3 h-full  md:flex md:items-center md:justify-center hidden'>
             {
                 datas.map((data , i) => (
                     <div className='group h-full p-5' key={i}>
@@ -46,14 +51,14 @@ function NavBar() {
         {/* icons */}
         <div className='h-full w-1/3 flex items-center justify-end'>
             <Link href="/login">
-            <div className='w-16 h-full flex justify-center items-center'>
+            <div className=' w-10 md:w-16 h-full flex justify-center items-center'>
                 <UserIcon className='h-7 w-7 cursor-pointer duration-300 hover:scale-125'/>
             </div>
             </Link>
-            <div className='w-16 flex h-full items-center justify-center'>
+            <div className='w-10 md:w-16 flex h-full items-center justify-center'>
                 <MagnifyingGlassIcon className='h-7 w-7 cursor-pointer duration-300 hover:scale-125'/>
             </div>
-            <div className='w-16 flex h-full items-center justify-center'>
+            <div className='w-10 md:w-16 flex h-full items-center justify-center'>
                 <BuildingStorefrontIcon className='h-7 w-7 cursor-pointer duration-300 hover:scale-125'/>
             </div>
         </div>
