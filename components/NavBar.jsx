@@ -13,7 +13,7 @@ function NavBar() {
         </div>
         {/* logo */}
         <div className='w-1/3 h-full flex items-center'>
-            <p className='text-2xl text-center font-bold px-4'>united by blue</p>
+            <p className='text-2xl text-center font-bold text-black px-4'>united by blue</p>
         </div>
         {/* navs */}
         <div className='w-1/3 h-full  md:flex md:items-center md:justify-center hidden'>

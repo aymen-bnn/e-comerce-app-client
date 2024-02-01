@@ -6,7 +6,8 @@ function TopNavBar() {
         logout()
     }
   return ( 
-        <div className='w-full sticky flex items-center justify-center bg-cyan-900'>
+        <div className='w-full sticky flex items-center justify-center bg-cyan-900 z-40'>
+            
             <div className='flex-1'>
                 <button 
                 onClick={handleClick}
